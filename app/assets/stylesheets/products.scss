@@ -1,0 +1,44 @@
+// Place all the styles related to the products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+p, th, td {
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+#all-products {
+  padding-top: 20px;
+}
+
+.product-table {
+  width: 80%;
+}
+
+.product-row {
+  border: 2px solid #857873;
+}
+
+.product-row-name {
+  width: 15%;
+}
+
+.product-row-description {
+  width: 40%;
+}
+
+.product-row-image-url {
+  width: 18%;
+}
+
+.product-row-link {
+  width: 5%;
+}
+
+#show-product {
+  padding-top: 20px;
+}
+
+.show-product-paragraph {
+  padding-bottom: 12px;
+  font-size: 1.15em;
+}
