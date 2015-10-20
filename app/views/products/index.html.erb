@@ -1,31 +1,29 @@
 <div id="all-products">
   <p id="notice"><%= notice %></p>
 
-  <h1>In Stock</h1>
+  <h1 class="all-products-header">Currently in stock</h1>
 
-  <table class="product-table">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Image url</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
+  <div class="row">
+    <div class="col-md-2"><strong>Name</strong></div>
+    <div class="col-md-3"><strong>Description</strong></div>
+    <div class="col-md-2"><strong>Image URL</strong></div>
+    <div class="col-md-2"><strong>Colour</strong></div>
+    <div class="col-md-1">&nbsp;</div>
+    <div class="col-md-1">&nbsp;</div>
+    <div class="col-md-1">&nbsp;</div>
+  </div>
 
-    <tbody>
-      <% @products.each do |product| %>
-        <tr class="product-row">
-          <td class="product-row-name"><%= product.name %></td>
-          <td class="product-row-description"><%= product.description %></td>
-          <td class="product-row-image-url"><%= product.image_url %></td>
-          <td class="product-row-link"><%= link_to 'Show', product %></td>
-          <td class="product-row-link"><%= link_to 'Edit', edit_product_path(product) %></td>
-          <td class="product-row-link"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+  <% @products.each do |product| %>
+    <div class="row product-row">
+      <div class="col-md-2"><%= product.name %></div>
+      <div class="col-md-3"><%= product.description %></div>
+      <div class="col-md-2"><%= product.image_url %></div>
+      <div class="col-md-2"><%= product.colour %></div>
+      <div class="col-md-1"><%= link_to 'Show', product %></div>
+      <div class="col-md-1"><%= link_to 'Edit', edit_product_path(product) %></div>
+      <div class="col-md-1"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+    </div>
+  <% end %>
 
   <br>
 
