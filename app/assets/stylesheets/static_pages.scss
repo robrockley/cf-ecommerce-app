@@ -30,6 +30,15 @@ body {
   font-size: 1.75em;
 }
 
+.carousel-caption a {
+  font-color: white;
+  text-decoration:none;
+}
+
+.carousel-caption a:visited {
+  font-color: white;
+}
+
 .footer {
   position: absolute;
   bottom: 0;
