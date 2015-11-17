@@ -31,6 +31,15 @@
         <li><%= link_to "Featured Products", static_pages_landing_path %></li>
         <li><%= link_to "About", static_pages_about_path %></li>
         <li><%= link_to "Contact", static_pages_contact_path%></li>
+        <li>
+          <%= form_tag("/products", method: "get", class: "navbar-form navbar-left", role: "search") do %>
+            <div class="form-group">
+              <%= label_tag(:q, "Search for:") %>
+              <%= text_field_tag(:q, "", class: "form-control") %>
+              <%= submit_tag("Search", class: "btn btn-primary") %>
+            </div>
+          <% end %>
+        </li>
       </ul>
     </div><!--/.nav-collapse -->
   </div>
