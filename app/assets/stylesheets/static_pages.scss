@@ -17,6 +17,19 @@ body {
   margin-bottom: 40px;
 }
 
+#nav-authentication {
+  margin-top: 6px;
+}
+
+#nav-authentication a {
+  background-color: #337ab7;
+  color: white;
+}
+
+#nav-authentication a:visited {
+  background-color: #337ab7; 
+}
+
 .global-header {
   padding-top: 60px;
 }
@@ -39,8 +52,13 @@ body {
   font-color: white;
 }
 
-.form-control {
-  width: 100%;
+.login-form {
+  width: 260px;
+  padding-left: 4px;
+}
+
+.contact-form {
+  width: 360px;
   padding-left: 4px;
 }
 

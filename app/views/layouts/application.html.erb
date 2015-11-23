@@ -41,11 +41,27 @@
           <% end %>
         </li>
       </ul>
+      <ul class="nav pull-right">
+        <li id="nav-authentication">
+          <% if user_signed_in? %>
+            <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+          <% else %>
+            <%= link_to('Login', new_user_session_path) %>
+          <% end %>
+        </li>
+      </ul>
     </div><!--/.nav-collapse -->
   </div>
-</nav>  
+</nav><!-- navbar end -->
 
 <div class="container">
+  <% if notice %>
+    <p class="notice"><%= notice %></p>
+  <% end %>
+  <% if alert %>
+    <p class="alert"><%= alert %></p>
+  <% end %>  
+
   <h1 class="global-header">Welcome to Rob's Records</h1>
   <h2>The place for vinyl collectors</h2> 
 </div>
