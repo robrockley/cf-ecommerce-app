@@ -55,12 +55,14 @@
 </nav><!-- navbar end -->
 
 <div class="container">
-  <% if notice %>
-    <p class="notice"><%= notice %></p>
-  <% end %>
-  <% if alert %>
-    <p class="alert"><%= alert %></p>
-  <% end %>  
+  <div class="top-alert">
+    <% if notice %>
+      <p id="notice" class="alert alert-info" role="alert"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p id="notice" class="alert alert-warning" role="alert"><%= alert %></p>
+    <% end %>
+  </div>  
 
   <h1 class="global-header">Welcome to Rob's Records</h1>
   <h2>The place for vinyl collectors</h2> 
