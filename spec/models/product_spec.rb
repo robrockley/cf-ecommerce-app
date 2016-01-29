@@ -7,7 +7,7 @@ describe Product do
       @user = FactoryGirl.create(:user)
       @product.comments.create!(rating: 1, user: @user, body: "I don't like this!")
       @product.comments.create!(rating: 3, user: @user, body: "Not too bad")
-      @product.comments.create!(rating: 5, user: @user, body: "Wow, great record!")
+      @product.comments.create!(rating: 5, user: @user, body: "Wow, this is a great record!")
     end
 
     it "returns the average rating of all comments" do
