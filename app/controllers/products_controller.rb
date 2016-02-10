@@ -13,12 +13,22 @@ class ProductsController < ApplicationController
       end
     else
       @products = Product.all
-    end  
+    end
+
+    logger.debug "Product name, colour and price:"
+    @products.each do |item|
+      logger.debug "Name: #{item.name}"
+      logger.debug "Colour: #{item.colour}"
+      logger.debug "Price: #{item.price}"
+    end
+    logger.debug "Done looping through products"
+
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
+    byebug
     @comments = @product.comments.paginate(:page => params[:page], :per_page => 5).order('id DESC')
   end
 
