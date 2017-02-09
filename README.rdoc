@@ -1,3 +1,3 @@
 == README
 
-I am learning Ruby on Rails.  This is my first app.
+This is an app that I built for the CareerFoundry Full Stack Developer course.
